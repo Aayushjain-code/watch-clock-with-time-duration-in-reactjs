@@ -1,11 +1,15 @@
 export const timeRanges1 = [
   {
     startTime: "03:00",
-    endTime: "09:00"
+    endTime: "05:00"
+  },
+  {
+    startTime: "10:00",
+    endTime: "14:00"
   },
   {
     startTime: "15:00",
-    endTime: "21:00"
+    endTime: "20:00"
   }
 ];
 

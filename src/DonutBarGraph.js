@@ -1,4 +1,5 @@
 import React from "react";
+import { WATCH_BARS_COLOR } from "./constants";
 import "./style.css";
 
 const DonutBarGraph = ({ segments, strokeWidth = 6, radius = 60 }) => {
@@ -36,6 +37,7 @@ const DonutBarGraph = ({ segments, strokeWidth = 6, radius = 60 }) => {
         strokeWidth={strokeWidth}
         fill="none"
       />
+      {/* Night label */}
       {/* Night label */}
       <text
         x={cx + 2}
@@ -119,6 +121,24 @@ const DonutBarGraph = ({ segments, strokeWidth = 6, radius = 60 }) => {
         strokeLinecap="round"
         strokeDasharray="2,2"
       />
+      <circle
+        cx={cx}
+        cy={cy}
+        r={radius - strokeWidth / 2}
+        stroke="#D8D8D8"
+        strokeWidth={strokeWidth}
+        fill="none"
+      />
+
+      {/* Background circle */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={radius - strokeWidth / 2}
+        stroke="#D8D8D8"
+        strokeWidth={strokeWidth}
+        fill="none"
+      />
 
       {segments.map((segment, index) => {
         const { startDegree, endDegree } = segment;
@@ -133,7 +153,7 @@ const DonutBarGraph = ({ segments, strokeWidth = 6, radius = 60 }) => {
             cy={cy}
             className="segment"
             r={radius - strokeWidth / 2}
-            stroke="#A195EC"
+            stroke={WATCH_BARS_COLOR}
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeDasharray={`${endAngle - 6 - startAngle}, 360`}

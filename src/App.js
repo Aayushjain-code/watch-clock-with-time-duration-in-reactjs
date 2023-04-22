@@ -28,19 +28,19 @@ export default function App() {
           onClick={() => setCurrentTimeRanges(timeRanges1)}
           className="button-style"
         >
-          Instagram
+          INSTAGRAM
         </button>
         <button
           onClick={() => setCurrentTimeRanges(timeRanges2)}
           className="button-style"
         >
-          Facebook
+          FACEBOOK
         </button>
         <button
           onClick={() => setCurrentTimeRanges(timeRanges3)}
           className="button-style"
         >
-          Snapchat
+          SNAPCHAT
         </button>
       </div>
       <div className="watchContainer" style={{ width: "400px" }}>
